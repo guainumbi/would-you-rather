@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PollSummary from "./PollSummary";
 import PollQuestion from "./PollQuestion";
@@ -11,6 +12,9 @@ class Poll extends Component {
       this.props.location.state === undefined
         ? this.props
         : this.props.location.state;
+    if (question === undefined) {
+      return <Redirect to="/404" />;
+    }
     const { authedUser, users, location, questions } = this.props;
     const asked_by = users[question.asked_by].name;
     const { text_1, text_2, id } = question;
