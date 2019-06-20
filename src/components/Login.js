@@ -55,67 +55,18 @@ class Login extends Component {
   };
   render() {
     const { name, user, avatarUrl } = this.state;
-    const options = [
-      {
-        value:
-          "https://newvitruvian.com/images/transparent-toad-icon-mario.png",
-        label: (
-          <Image
-            src="https://newvitruvian.com/images/transparent-toad-icon-mario.png"
-            width={40}
-            height={40}
-            rounded
-          />
-        )
-      },
-      {
-        value: "https://sitejerk.com/images/transparent-star-gif-2.png/",
-        label: (
-          <Image
-            src="https://sitejerk.com/images/transparent-star-gif-2.png/"
-            width={40}
-            height={40}
-            rounded
-          />
-        )
-      },
-      {
-        value:
-          "https://www.freeiconspng.com/uploads/luma-green-icon-super-mario-18.png",
-        label: (
-          <Image
-            src="https://www.freeiconspng.com/uploads/luma-green-icon-super-mario-18.png"
-            width={40}
-            height={40}
-            rounded
-          />
-        )
-      },
-      {
-        value:
-          "http://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Boo-icon.png",
-        label: (
-          <Image
-            src="http://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Boo-icon.png"
-            width={40}
-            height={40}
-            rounded
-          />
-        )
-      },
-      {
-        value:
-          "https://s.pngkit.com/png/small/94-946469_pink-mushroom-mushroom-images-mario-kart-poisons-poison.png",
-        label: (
-          <Image
-            src="https://s.pngkit.com/png/small/94-946469_pink-mushroom-mushroom-images-mario-kart-poisons-poison.png"
-            width={40}
-            height={40}
-            rounded
-          />
-        )
-      }
+    const urls = [
+      "https://sitejerk.com/images/transparent-star-gif-2.png/",
+      "https://newvitruvian.com/images/transparent-toad-icon-mario.png",
+      "https://www.freeiconspng.com/uploads/luma-green-icon-super-mario-18.png",
+      "http://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Boo-icon.png",
+      "https://s.pngkit.com/png/small/94-946469_pink-mushroom-mushroom-images-mario-kart-poisons-poison.png"
     ];
+    const avatar_options = urls.map(url => ({
+      value: url,
+      label: <Image src={url} width={40} height={40} rounded />
+    }));
+
     return (
       <Container>
         <h1>LOGIN</h1>
@@ -147,7 +98,7 @@ class Login extends Component {
                     <Image src={avatarUrl} width={40} height={40} rounded />
                   }
                   value={avatarUrl}
-                  options={options}
+                  options={avatar_options}
                   onChange={this.handleChangeImage}
                 />
               </Figure>
