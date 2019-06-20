@@ -16,7 +16,6 @@ class Poll extends Component {
     const { text_1, text_2, id } = question;
     return (
       <div className="poll-component">
-        {console.log("poll props: ", this.props.questions)}
         <Row>
           <Col sm={4}>Asked by:</Col>
           <Col sm={8}>
