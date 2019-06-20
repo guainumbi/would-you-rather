@@ -43,7 +43,7 @@ class NewQuestion extends Component {
     const { text_1, text_2 } = this.state;
     return (
       <Container>
-        <h1>NEW QUESTION</h1>
+        <h2>NEW QUESTION</h2>
         <Container>Would you rather</Container>
         <Form className="new-form" onSubmit={this.handleSubmit}>
           <Form.Control

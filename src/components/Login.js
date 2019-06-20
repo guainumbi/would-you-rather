@@ -69,7 +69,7 @@ class Login extends Component {
 
     return (
       <Container>
-        <h1>LOGIN</h1>
+        <h2>LOGIN</h2>
         <Form className="new-form" onSubmit={this.handleSubmit}>
           <Container>Select existing account:</Container>
           <Form.Control

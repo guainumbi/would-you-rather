@@ -11,7 +11,7 @@ class Home extends Component {
     });
     return (
       <Container className="home-component">
-        <h1>HOME</h1>
+        <h2>HOME</h2>
         <Container>
           <Tab.Container defaultActiveKey="first">
             <Row>
@@ -32,13 +32,11 @@ class Home extends Component {
                       question =>
                         question.answered_by.includes(authedUser) === false && (
                           <Container key={question.id}>
-                            <div className="card card-body">
-                              <Poll
-                                question={question}
-                                authedUser={authedUser}
-                                location={location}
-                              />
-                            </div>
+                            <Poll
+                              question={question}
+                              authedUser={authedUser}
+                              location={location}
+                            />
                           </Container>
                         )
                     )}
@@ -47,13 +45,13 @@ class Home extends Component {
                     {questionsArray.map(
                       question =>
                         question.answered_by.includes(authedUser) && (
-                          <div key={question.id} className="card card-body">
+                          <Container key={question.id}>
                             <Poll
                               question={question}
                               authedUser={authedUser}
                               location={location}
                             />
-                          </div>
+                          </Container>
                         )
                     )}
                   </Tab.Pane>
