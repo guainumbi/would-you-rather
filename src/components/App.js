@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.props.authedUser === true ? (
+        {this.props.auth === true ? (
           <Login />
         ) : (
           <Router>
@@ -38,7 +38,7 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    authedUser: state.authedUser.user_id === null,
+    auth: state.authedUser.user_id === null,
     users: state.users
   };
 }
