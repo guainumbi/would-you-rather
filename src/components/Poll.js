@@ -12,9 +12,15 @@ class Poll extends Component {
       this.props.location.state === undefined
         ? this.props
         : this.props.location.state;
-    if (question === undefined) {
+
+    if (question !== undefined) {
+      if (this.props.questions[question.id] === undefined) {
+        return <Redirect to="/404" />;
+      }
+    } else {
       return <Redirect to="/404" />;
     }
+
     const { authedUser, users, location, questions } = this.props;
     const asked_by = users[question.asked_by].name;
     const { text_1, text_2, id } = question;
