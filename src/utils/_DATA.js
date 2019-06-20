@@ -46,7 +46,8 @@ let questions = {
     text_2: "Watch a TV Show",
     text_2_chosen_by: ["2"],
     answered_by: ["2", "3"],
-    asked_by: "2"
+    asked_by: "2",
+    timestamp: 1467166872634
   },
   asdflkj12310asdfo0911aslkn: {
     id: "asdflkj12310asdfo0911aslkn",
@@ -55,7 +56,8 @@ let questions = {
     text_2: "do a bungee jump",
     text_2_chosen_by: [],
     answered_by: ["1", "2", "3"],
-    asked_by: "3"
+    asked_by: "3",
+    timestamp: 1468479767190
   },
   asdf987asdkasdf98000ad: {
     id: "asdf987asdkasdf98000ad",
@@ -64,7 +66,8 @@ let questions = {
     text_2: "dance",
     text_2_chosen_by: ["2"],
     answered_by: ["1", "2"],
-    asked_by: "1"
+    asked_by: "1",
+    timestamp: 1488579767190
   },
   sd098sdfh12k3jha09a000ad61823: {
     id: "sd098sdfh12k3jha09a000ad61823",
@@ -73,7 +76,8 @@ let questions = {
     text_2: "chips",
     text_2_chosen_by: ["2"],
     answered_by: ["2", "3"],
-    asked_by: "1"
+    asked_by: "1",
+    timestamp: 1482579767190
   },
   sdf09a0sd09fa0sdf9afa0sd9f8: {
     id: "sdf09a0sd09fa0sdf9afa0sd9f8",
@@ -82,7 +86,8 @@ let questions = {
     text_2: "swim in the lake",
     text_2_chosen_by: ["1"],
     answered_by: ["1", "2"],
-    asked_by: "2"
+    asked_by: "2",
+    timestamp: 1489579767190
   }
 };
 

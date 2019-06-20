@@ -46,7 +46,8 @@ export function handleAddQuestion(text_1, text_2) {
       text_1_chosen_by: [],
       text_2_chosen_by: [],
       asked_by: getState().authedUser.user_id,
-      answered_by: []
+      answered_by: [],
+      timestamp: Date.now()
     };
     dispatch(addQuestion(question));
     dispatch(addAskedQuestion(question.id, question.asked_by));

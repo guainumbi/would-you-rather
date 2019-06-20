@@ -6,6 +6,9 @@ import Poll from "./Poll";
 class Home extends Component {
   render() {
     const { questions, authedUser, location } = this.props;
+    let questionsArray = Object.values(questions).sort(function(a, b) {
+      return b.timestamp - a.timestamp;
+    });
     return (
       <Container className="home-component">
         <h1>HOME</h1>
@@ -25,7 +28,7 @@ class Home extends Component {
               <Col sm={9}>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    {Object.values(questions).map(
+                    {questionsArray.map(
                       question =>
                         question.answered_by.includes(authedUser) === false && (
                           <Container key={question.id}>
@@ -41,7 +44,7 @@ class Home extends Component {
                     )}
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    {Object.values(questions).map(
+                    {questionsArray.map(
                       question =>
                         question.answered_by.includes(authedUser) && (
                           <div key={question.id} className="card card-body">
