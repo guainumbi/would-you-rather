@@ -44,7 +44,9 @@ class PollQuestion extends Component {
             onChange={this.handleChange}
           />
           <Container>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled={this.state.answer === null}>
+              Submit
+            </Button>
           </Container>
         </Form>
       </div>
