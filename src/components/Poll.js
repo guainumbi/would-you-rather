@@ -48,7 +48,7 @@ class Poll extends Component {
               <PollQuestion question={question} />
             ) : (
               <PollResult
-                question={question}
+                question={questions[id]}
                 authedUser={authedUser}
                 users={users}
               />
