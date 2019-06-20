@@ -26,7 +26,6 @@ class PollQuestion extends Component {
     const { text_1, text_2 } = question;
     return (
       <div className="poll-details">
-        {console.log("question props_ ", this.props)}
         <Form onSubmit={this.handleSubmit}>
           <Form.Check
             type="radio"
