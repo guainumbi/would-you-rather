@@ -1,9 +1,10 @@
 import { generateID } from "./shared";
-
-export const ADD_USER = "ADD_USER";
-export const ADD_ASKED_QUESTION = "ADD_ASKED_QUESTION";
-export const ADD_ANSWERED_QUESTION = "ADD_ANSWERED_QUESTION";
-export const RECEIVE_USERS = "RECEIVE_USERS";
+import {
+  ADD_USER,
+  ADD_ASKED_QUESTION,
+  ADD_ANSWERED_QUESTION,
+  RECEIVE_USERS
+} from "./types";
 
 export function receiveUsers(users) {
   return {

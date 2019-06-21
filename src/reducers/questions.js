@@ -3,7 +3,7 @@ import {
   ADD_ANSWERED_BY_USER,
   ADD_USERS_CHOICE,
   RECEIVE_QUESTIONS
-} from "../actions/questions";
+} from "../actions/types";
 
 export default function addQuestion(state = {}, action) {
   switch (action.type) {
