@@ -65,11 +65,11 @@ class Home extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ authedUser, users, questions }) {
   return {
-    authedUser: state.authedUser.user_id,
-    users: state.users,
-    questions: state.questions
+    authedUser: authedUser.user_id,
+    users,
+    questions
   };
 }
 

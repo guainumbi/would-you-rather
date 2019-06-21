@@ -40,10 +40,10 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ authedUser, users }) {
   return {
-    auth: state.authedUser.user_id === null,
-    users: state.users
+    auth: authedUser.user_id === null,
+    users
   };
 }
 

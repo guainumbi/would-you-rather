@@ -56,10 +56,10 @@ class NavMenu extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ authedUser, users }) {
   return {
-    authedUser: state.authedUser.user_id,
-    users: state.users
+    authedUser: authedUser.user_id,
+    users
   };
 }
 

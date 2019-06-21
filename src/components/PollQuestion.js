@@ -53,10 +53,8 @@ class PollQuestion extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    questions: state.questions
-  };
+function mapStateToProps({ questions }) {
+  return { questions };
 }
 
 export default connect(mapStateToProps)(PollQuestion);
